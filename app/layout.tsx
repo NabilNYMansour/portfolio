@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import Footer from "@/components/layout/footer";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const allianceNo2 = localFont({ 
   src: "../public/AllianceNo2.otf",
@@ -78,6 +79,7 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
