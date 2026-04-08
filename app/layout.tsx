@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import localFont from "next/font/local";
 import Footer from "@/components/layout/footer";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from "@vercel/analytics/next"
 
 const allianceNo2 = localFont({ 
   src: "../public/AllianceNo2.otf",
@@ -76,6 +77,7 @@ export default function RootLayout({
             <Footer />
           </TooltipProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
