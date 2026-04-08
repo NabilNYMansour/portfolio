@@ -29,7 +29,7 @@ export default function Page() {
               I&apos;m a software engineer from <b>Toronto</b> and <b>MScAC</b> student at <b>University of Toronto</b>.
             </p>
             <p>
-              I like to work with anything related to computers, but have been recently focusing <b>Web Technologies</b> and <b>Graphics</b>.
+              I like to work with anything related to computers, but have been recently focusing <b>web technologies</b> and <b>graphics</b>.
             </p>
             <p>
               You can contact me and find more about me on the links below:

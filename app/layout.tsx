@@ -17,7 +17,6 @@ const allianceNo2 = localFont({
 const description = "Software Engineer, GPU Programmer, FullStack developer, and YouTuber based in Toronto.";
 const title = "Nabil Mansour's Portfolio";
 const author = "Nabil Mansour";
-
 const MAIN_URL = "https://nabilmansour.com/";
 
 export const metadata: Metadata = {
