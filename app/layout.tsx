@@ -68,7 +68,7 @@ export default function RootLayout({
       className={cn("antialiased", allianceNo2.className)}
     >
       <body className="flex flex-col items-center min-h-svh">
-        <ThemeProvider>
+        <ThemeProvider defaultTheme="system" enableSystem>
           <TooltipProvider>
             <Header />
             <main className="max-w-4xl w-full">
