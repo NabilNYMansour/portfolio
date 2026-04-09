@@ -3,7 +3,6 @@
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
-import { cn } from "@/lib/utils"
 
 function ThemeToggle({
   className,
@@ -19,7 +18,7 @@ function ThemeToggle({
     <Button
       variant={variant}
       size="icon"
-      className={cn("size-7", className)}
+      className={className}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       title="Toggle theme"
     >
