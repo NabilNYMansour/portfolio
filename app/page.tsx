@@ -94,25 +94,40 @@ export default function Page() {
         </div>
       </div>
       <Separator />
-      <div className="flex flex-col gap-4">
+      <div id="projects" className="flex flex-col gap-4 scroll-mt-14">
         <p className="text-2xl font-bold">
-          Latest Project
+          Projects
         </p>
         <div className="flex flex-col gap-2">
-          <p>
-            <span className="text-lg font-bold">{LATEST_PROJECT.title}</span> - <span className="text-sm text-muted-foreground">{LATEST_PROJECT.description}</span>
-          </p>
-          <Link className="hover:opacity-80 transition-opacity border rounded-xl overflow-hidden" href={LATEST_PROJECT.link} target="_blank" rel="noopener noreferrer">
-            <Image src={LATEST_PROJECT.image} alt={LATEST_PROJECT.title} width={800} height={800} className="w-full h-full object-cover" />
-          </Link>
+          {PROJECTS.map((project) => (
+            <p key={project.title}>
+              <Link
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-bold underline hover:text-muted-foreground"
+              >
+                {project.title}
+              </Link>{" "}
+              - <span className="text-sm text-muted-foreground">
+                {project.description}
+                {project.descriptionLink && (
+                  <>
+                    {" "}
+                    <Link
+                      href={project.descriptionLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-primary"
+                    >
+                      {project.descriptionLink.label}
+                    </Link>
+                  </>
+                )}
+              </span>
+            </p>
+          ))}
         </div>
-        <p>
-          You can find more projects on my{" "}
-          <Link href="https://github.com/NabilNYMansour#projects" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-muted-foreground">
-            GitHub
-          </Link>
-          {" "}profile.
-        </p>
       </div>
     </div>
   )
@@ -161,9 +176,79 @@ export const CONTACTS = [
   },
 ];
 
-export const LATEST_PROJECT = {
-  title: "Phibelle",
-  description: "A game engine that runs completely in the browser, built with Three.js, R3F and Typescript.",
-  image: "/project.png",
-  link: "https://phibelle.studio/",
-}
+export const PROJECTS = [
+  {
+    title: "Phibelle Engine",
+    description: "A web game engine",
+    link: "https://phibelle.studio/",
+  },
+  {
+    title: "QRCodeer",
+    description: "A simple and easy-to-use free QR code generator. No account needed",
+    link: "https://www.qrcodeer.dev/",
+  },
+  {
+    title: "SECRETeer",
+    description: "End-to-end encrypted secret sharing platform. No account needed also. Completely free",
+    link: "https://secreteer.dev/",
+  },
+  {
+    title: "Excalihub",
+    description: "A free platform for creating and sharing Excalidraw drawings",
+    link: "https://excalihub.dev/",
+  },
+  {
+    title: "Fractal Glide",
+    description: "A fractal game where the player glides through fractal landscapes (available on Steam!)",
+    link: "https://store.steampowered.com/app/2565200/Fractal_Glide/",
+  },
+  {
+    title: "Medium to Markdown",
+    description: "A web app that converts Medium articles to markdown files",
+    link: "https://medium2md.nabilmansour.com/",
+  },
+  {
+    title: "Unity FractiX",
+    description: "Open-source ray/cone marching rendering engine written as a post-effect to the Unity rendering pipeline",
+    link: "https://github.com/NabilNYMansour/Unity-FractiX",
+  },
+  {
+    title: "Neuro Gambit",
+    description: "An artificial neural network made and trained using PyTorch to play chess",
+    link: "https://github.com/NabilNYMansour/Neuro-Gambit",
+  },
+  {
+    title: "Fractal Explorer",
+    description: "A VR experience where the player explores an endless fractal world made with the ray marching algorithm",
+    link: "https://github.com/NabilNYMansour/Fractal-Explorer",
+  },
+  {
+    title: "Slime Simulation",
+    description: "An implementation of slime mold cellular automata written in Python",
+    link: "https://github.com/NabilNYMansour/Slime-Simulation",
+  },
+  {
+    title: "PyLisp",
+    description: "A Lisp interpreter written in Python loosely following John McCarthy's",
+    descriptionLink: {
+      href: "https://people.cs.umass.edu/~emery/classes/cmpsci691st/readings/PL/LISP.pdf",
+      label: "original Lisp paper",
+    },
+    link: "https://github.com/NabilNYMansour/PyLisp",
+  },
+  {
+    title: "Self Parallel Parking Arduino Car",
+    description: "An Arduino car that parallel parks on its own",
+    link: "https://github.com/NabilNYMansour/CPS607-Self-Parallel-Parking",
+  },
+  {
+    title: "Wireless Arduino RC Car",
+    description: "A wireless Arduino RC car made out of cardboard and controlled using radio antennas",
+    link: "https://github.com/NabilNYMansour/Wireless-RC-Car",
+  },
+  {
+    title: "Voxel Terrain",
+    description: "A Unity demo that showcases a randomly generated voxel terrain based on Minecraft",
+    link: "https://github.com/NabilNYMansour/Voxel-Terrain",
+  },
+];
