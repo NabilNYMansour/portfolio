@@ -14,11 +14,13 @@ import {
 } from "@/components/ui/tooltip"
 
 export default function Page() {
+  const profileImage = Math.random() < 0.5 ? "/profile.jpeg" : "/fractal.png";
+
   return (
     <div className="flex flex-col gap-8 p-6">
       <div className="flex gap-4 sm:flex-row flex-col sm:items-start items-center">
         <div className="border rounded-xl overflow-hidden w-fit h-fit min-w-64 min-h-64">
-          <Image src="/profile.jpeg" alt="Profile" width={256} height={256} className="w-full h-full object-cover" />
+          <Image src={profileImage} alt="Profile" width={256} height={256} className="w-full h-full object-cover" />
         </div>
         <div className="flex flex-col gap-4 sm:items-start items-center">
           <p className="text-2xl font-bold">
