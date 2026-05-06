@@ -16,17 +16,17 @@ import {
 export default function Page() {
   return (
     <div className="flex flex-col gap-8 p-6">
-      <div className="flex gap-4 sm:flex-row flex-col items-center">
+      <div className="flex gap-4 sm:flex-row flex-col sm:items-start items-center">
         <div className="border rounded-xl overflow-hidden w-fit h-fit min-w-64 min-h-64">
           <Image src="/profile.jpeg" alt="Profile" width={256} height={256} className="w-full h-full object-cover" />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:items-start items-center">
           <p className="text-2xl font-bold">
             Hi <span className="wave">👋</span>, I&apos;m Nabil Mansour
           </p>
           <div className="flex flex-col gap-2">
             <p>
-              I&apos;m a software engineer from <b>Toronto</b> and <b>MScAC</b> student at <b>University of Toronto</b>.
+              I&apos;m a software engineer and <b>MScAC</b> student at <b>University of Toronto</b>.
             </p>
             <p>
               I like to work with anything related to computers, but have been recently focusing <b>web technologies</b> and <b>graphics</b>.
