@@ -1,7 +1,6 @@
 import { MediumIcon, ShaderToyIcon } from "@/components/elements/custom-icons";
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image"
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin, FaYoutube } from "react-icons/fa";
@@ -12,15 +11,15 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import ProfileImage from "@/components/elements/profile-image";
 
 export default function Page() {
-  const profileImage = Math.random() < 0.5 ? "/profile.jpeg" : "/fractal.png";
 
   return (
     <div className="flex flex-col gap-8 p-6">
       <div className="flex gap-4 sm:flex-row flex-col sm:items-start items-center">
         <div className="border rounded-xl overflow-hidden w-fit h-fit min-w-64 min-h-64">
-          <Image src={profileImage} alt="Profile" width={256} height={256} className="w-full h-full object-cover" />
+          <ProfileImage />
         </div>
         <div className="flex flex-col gap-4 sm:items-start items-center">
           <p className="text-2xl font-bold">
@@ -135,7 +134,7 @@ export default function Page() {
   )
 }
 
-export const CONTACTS = [
+const CONTACTS = [
   {
     link: "https://www.youtube.com/@nabilnymansour",
     title: "YouTube",
@@ -178,7 +177,7 @@ export const CONTACTS = [
   },
 ];
 
-export const PROJECTS = [
+const PROJECTS = [
   {
     title: "Phibelle Engine",
     description: "A web game engine",
