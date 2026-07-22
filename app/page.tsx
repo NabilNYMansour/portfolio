@@ -179,6 +179,11 @@ const CONTACTS = [
 
 const PROJECTS = [
   {
+    title: "FiberToy",
+    description: "A React three fiber coding platform where users can create and share 3D scenes. Inspired by ShaderToy",
+    link: "https://fibertoy.dev/",
+  },
+  {
     title: "Phibelle Engine",
     description: "A web game engine",
     link: "https://phibelle.studio/",
