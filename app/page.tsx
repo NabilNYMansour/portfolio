@@ -11,7 +11,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import ProfileImage from "@/components/elements/profile-image";
+import Image from "next/image";
 
 export default function Page() {
 
@@ -19,7 +19,13 @@ export default function Page() {
     <div className="flex flex-col gap-8 p-6">
       <div className="flex gap-4 sm:flex-row flex-col sm:items-start items-center">
         <div className="border rounded-xl overflow-hidden w-fit h-fit min-w-64 min-h-64">
-          <ProfileImage />
+          <Image
+            src="/profile.jpeg"
+            alt="Profile"
+            width={256}
+            height={256}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="flex flex-col gap-4 sm:items-start items-center">
           <p className="text-2xl font-bold">
