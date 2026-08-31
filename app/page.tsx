@@ -1,59 +1,67 @@
-import { MediumIcon, ShaderToyIcon } from "@/components/elements/custom-icons";
+import { MediumIcon, ShaderToyIcon } from "@/components/elements/custom-icons"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
-import { AiFillGithub } from "react-icons/ai";
-import { FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
+import { AiFillGithub } from "react-icons/ai"
+import { FaLinkedin, FaYoutube } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
+import { MdEmail } from "react-icons/md"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import Image from "next/image";
+import Image from "next/image"
 
 export default function Page() {
-
   return (
     <div className="flex flex-col gap-8 p-6">
-      <div className="flex gap-4 sm:flex-row flex-col sm:items-start items-center">
-        <div className="border rounded-xl overflow-hidden w-fit h-fit min-w-64 min-h-64">
+      <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+        <div className="h-fit min-h-64 w-fit min-w-64 overflow-hidden rounded-xl border">
           <Image
             src="/profile.jpeg"
             alt="Profile"
             width={256}
             height={256}
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
-        <div className="flex flex-col gap-4 sm:items-start items-center">
+        <div className="flex flex-col items-center gap-4 sm:items-start">
           <p className="text-2xl font-bold">
             Hi <span className="wave">👋</span>, I&apos;m Nabil Mansour
           </p>
           <div className="flex flex-col gap-2">
             <p>
-              I&apos;m a software engineer and <b>MScAC</b> student at <b>University of Toronto</b>.
+              I&apos;m a software engineer and <b>MScAC</b> student at{" "}
+              <b>University of Toronto</b>.
             </p>
             <p>
-              I like to work with anything related to computers, but have been recently focusing <b>web technologies</b> and <b>graphics</b>.
+              I like to work with anything related to computers, but have mostly
+              focused on <b>web echnologies</b> and <b>graphics</b>. Recently,
+              I&apos;ve been getting into <b>deep Learning</b>.
             </p>
-            <p>
-              You can contact me and find more about me on the links below:
-            </p>
-            <div className="flex gap-2 justify-center sm:justify-start flex-wrap">
+            <p>You can contact me and find more about me on the links below:</p>
+            <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
               {CONTACTS.map((contact) => (
                 <Tooltip key={contact.title}>
                   <TooltipTrigger>
-                    <Button key={contact.title} variant="outline" size="icon-lg" aria-label={contact.title} asChild>
-                      <a href={contact.link} target="_blank" rel="noopener noreferrer">
+                    <Button
+                      key={contact.title}
+                      variant="outline"
+                      size="icon-lg"
+                      aria-label={contact.title}
+                      asChild
+                    >
+                      <a
+                        href={contact.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {contact.icon}
                       </a>
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent>
-                    {contact.title}
-                  </TooltipContent>
+                  <TooltipContent>{contact.title}</TooltipContent>
                 </Tooltip>
               ))}
             </div>
@@ -62,7 +70,7 @@ export default function Page() {
       </div>
       <Separator />
       <div className="flex flex-col gap-4">
-        <p className="text-2xl font-bold flex items-center gap-2">
+        <p className="flex items-center gap-2 text-2xl font-bold">
           YouTube Channel <FaYoutube size={28} />
         </p>
         <div className="flex flex-col gap-2">
@@ -75,8 +83,10 @@ export default function Page() {
               className="text-primary underline hover:text-muted-foreground"
             >
               YouTube
-            </Link>
-            {" "}channel where I post devlogs and videos about graphics programming, computer science, game development, and other topics related to technology.
+            </Link>{" "}
+            channel where I post devlogs and videos about graphics programming,
+            computer science, game development, and other topics related to
+            technology.
           </p>
           <p>
             Here&apos;s one of my devlog videos for my game,{" "}
@@ -84,15 +94,16 @@ export default function Page() {
               href="https://store.steampowered.com/app/2565200/Fractal_Glide/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-muted-foreground font-bold"
+              className="font-bold text-primary underline hover:text-muted-foreground"
             >
               FRACTAL GLIDE
-            </Link>:
+            </Link>
+            :
           </p>
           <iframe
             src="https://www.youtube.com/embed/qUBA8Xotc4o?si=ml3y3Xf9RcSlEFWR"
             title="YouTube video player"
-            className="w-full aspect-video rounded-xl"
+            className="aspect-video w-full rounded-xl"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -101,10 +112,8 @@ export default function Page() {
         </div>
       </div>
       <Separator />
-      <div id="projects" className="flex flex-col gap-4 scroll-mt-14">
-        <p className="text-2xl font-bold">
-          Projects
-        </p>
+      <div id="projects" className="flex scroll-mt-14 flex-col gap-4">
+        <p className="text-2xl font-bold">Projects</p>
         <div className="flex flex-col gap-2">
           {PROJECTS.map((project) => (
             <p key={project.title}>
@@ -116,7 +125,8 @@ export default function Page() {
               >
                 {project.title}
               </Link>{" "}
-              - <span className="text-sm text-muted-foreground">
+              -{" "}
+              <span className="text-sm text-muted-foreground">
                 {project.description}
                 {project.descriptionLink && (
                   <>
@@ -181,12 +191,13 @@ const CONTACTS = [
     title: "Email",
     icon: <MdEmail size={28} />,
   },
-];
+]
 
 const PROJECTS = [
   {
     title: "FiberToy",
-    description: "A React three fiber coding platform where users can create and share 3D scenes. Inspired by ShaderToy",
+    description:
+      "A React three fiber coding platform where users can create and share 3D scenes. Inspired by ShaderToy",
     link: "https://fibertoy.dev/",
   },
   {
@@ -196,12 +207,14 @@ const PROJECTS = [
   },
   {
     title: "QRCodeer",
-    description: "A simple and easy-to-use free QR code generator. No account needed",
+    description:
+      "A simple and easy-to-use free QR code generator. No account needed",
     link: "https://www.qrcodeer.dev/",
   },
   {
     title: "SECRETeer",
-    description: "End-to-end encrypted secret sharing platform. No account needed also. Completely free",
+    description:
+      "End-to-end encrypted secret sharing platform. No account needed also. Completely free",
     link: "https://secreteer.dev/",
   },
   {
@@ -211,7 +224,8 @@ const PROJECTS = [
   },
   {
     title: "Fractal Glide",
-    description: "A fractal game where the player glides through fractal landscapes (available on Steam!)",
+    description:
+      "A fractal game where the player glides through fractal landscapes (available on Steam!)",
     link: "https://store.steampowered.com/app/2565200/Fractal_Glide/",
   },
   {
@@ -221,27 +235,32 @@ const PROJECTS = [
   },
   {
     title: "Unity FractiX",
-    description: "Open-source ray/cone marching rendering engine written as a post-effect to the Unity rendering pipeline",
+    description:
+      "Open-source ray/cone marching rendering engine written as a post-effect to the Unity rendering pipeline",
     link: "https://github.com/NabilNYMansour/Unity-FractiX",
   },
   {
     title: "Neuro Gambit",
-    description: "An artificial neural network made and trained using PyTorch to play chess",
+    description:
+      "An artificial neural network made and trained using PyTorch to play chess",
     link: "https://github.com/NabilNYMansour/Neuro-Gambit",
   },
   {
     title: "Fractal Explorer",
-    description: "A VR experience where the player explores an endless fractal world made with the ray marching algorithm",
+    description:
+      "A VR experience where the player explores an endless fractal world made with the ray marching algorithm",
     link: "https://github.com/NabilNYMansour/Fractal-Explorer",
   },
   {
     title: "Slime Simulation",
-    description: "An implementation of slime mold cellular automata written in Python",
+    description:
+      "An implementation of slime mold cellular automata written in Python",
     link: "https://github.com/NabilNYMansour/Slime-Simulation",
   },
   {
     title: "PyLisp",
-    description: "A Lisp interpreter written in Python loosely following John McCarthy's",
+    description:
+      "A Lisp interpreter written in Python loosely following John McCarthy's",
     descriptionLink: {
       href: "https://people.cs.umass.edu/~emery/classes/cmpsci691st/readings/PL/LISP.pdf",
       label: "original Lisp paper",
@@ -255,12 +274,14 @@ const PROJECTS = [
   },
   {
     title: "Wireless Arduino RC Car",
-    description: "A wireless Arduino RC car made out of cardboard and controlled using radio antennas",
+    description:
+      "A wireless Arduino RC car made out of cardboard and controlled using radio antennas",
     link: "https://github.com/NabilNYMansour/Wireless-RC-Car",
   },
   {
     title: "Voxel Terrain",
-    description: "A Unity demo that showcases a randomly generated voxel terrain based on Minecraft",
+    description:
+      "A Unity demo that showcases a randomly generated voxel terrain based on Minecraft",
     link: "https://github.com/NabilNYMansour/Voxel-Terrain",
   },
-];
+]
