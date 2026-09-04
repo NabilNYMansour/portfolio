@@ -5,7 +5,6 @@ import Link from "next/link"
 import { AiFillGithub } from "react-icons/ai"
 import { FaLinkedin, FaYoutube } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import { MdEmail } from "react-icons/md"
 import {
   Tooltip,
   TooltipContent,
@@ -41,6 +40,26 @@ export default function Page() {
               I&apos;ve been getting into <b>deep Learning</b>.
             </p>
             <p>You can contact me and find more about me on the links below:</p>
+            <div className="flex flex-col gap-1 text-center sm:text-left">
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:nabilnymansour@gmail.com"
+                  className="text-primary underline hover:text-muted-foreground"
+                >
+                  nabilnymansour@gmail.com
+                </a>
+              </p>
+              <p>
+                Academic email:{" "}
+                <a
+                  href="mailto:nmansour@cs.toronto.edu"
+                  className="text-primary underline hover:text-muted-foreground"
+                >
+                  nmansour@cs.toronto.edu
+                </a>
+              </p>
+            </div>
             <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
               {CONTACTS.map((contact) => (
                 <Tooltip key={contact.title}>
@@ -186,11 +205,6 @@ const CONTACTS = [
   //   title: "Resume",
   //   icon: <BsFillFileEarmarkPersonFill size={24} />,
   // },
-  {
-    link: "mailto:nabilnymansour@gmail.com",
-    title: "Email",
-    icon: <MdEmail size={28} />,
-  },
 ]
 
 const PROJECTS = [
