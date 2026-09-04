@@ -5,7 +5,6 @@ import Link from "next/link"
 import { AiFillGithub } from "react-icons/ai"
 import { FaLinkedin, FaYoutube } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import { MdEmail } from "react-icons/md"
 import {
   Tooltip,
   TooltipContent,
@@ -41,6 +40,26 @@ export default function Page() {
               I&apos;ve been getting into <b>deep Learning</b>.
             </p>
             <p>You can contact me and find more about me on the links below:</p>
+            <div className="flex flex-col gap-1 text-sm sm:text-base">
+              <p>
+                <span className="font-semibold">Business email:</span>{" "}
+                <a
+                  href="mailto:nabilnymansour@gmail.com"
+                  className="text-primary underline hover:text-muted-foreground"
+                >
+                  nabilnymansour@gmail.com
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold">Academic email:</span>{" "}
+                <a
+                  href="mailto:nmansour@cs.toronto.edu"
+                  className="text-primary underline hover:text-muted-foreground"
+                >
+                  nmansour@cs.toronto.edu
+                </a>
+              </p>
+            </div>
             <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
               {CONTACTS.map((contact) => (
                 <Tooltip key={contact.title}>
@@ -48,7 +67,7 @@ export default function Page() {
                     <Button
                       key={contact.title}
                       variant="outline"
-                      size="icon-lg"
+                      size="icon-sm"
                       aria-label={contact.title}
                       asChild
                     >
@@ -154,43 +173,38 @@ const CONTACTS = [
   {
     link: "https://www.youtube.com/@nabilnymansour",
     title: "YouTube",
-    icon: <FaYoutube size={28} />,
+    icon: <FaYoutube size={18} />,
   },
   {
     link: "https://medium.com/@nabilnymansour",
     title: "Medium",
-    icon: <MediumIcon size={20} />,
+    icon: <MediumIcon size={14} />,
   },
   {
     link: "https://x.com/nabilnymansour",
     title: "Twitter/X",
-    icon: <FaXTwitter size={24} />,
+    icon: <FaXTwitter size={16} />,
   },
   {
     link: "https://www.linkedin.com/in/nnym/",
     title: "LinkedIn",
-    icon: <FaLinkedin size={24} />,
+    icon: <FaLinkedin size={16} />,
   },
   {
     link: "https://github.com/NabilNYMansour",
     title: "GitHub",
-    icon: <AiFillGithub size={28} />,
+    icon: <AiFillGithub size={18} />,
   },
   {
     link: "https://www.shadertoy.com/user/chickenlegs",
     title: "ShaderToy",
-    icon: <ShaderToyIcon size={20} />,
+    icon: <ShaderToyIcon size={14} />,
   },
   // {
   //   link: "/NNYM_Resume.pdf",
   //   title: "Resume",
   //   icon: <BsFillFileEarmarkPersonFill size={24} />,
   // },
-  {
-    link: "mailto:nabilnymansour@gmail.com",
-    title: "Email",
-    icon: <MdEmail size={28} />,
-  },
 ]
 
 const PROJECTS = [
