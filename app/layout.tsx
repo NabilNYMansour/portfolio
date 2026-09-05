@@ -16,7 +16,7 @@ const allianceNo2 = localFont({
   fallback: ['system-ui', 'arial'],
 });
 
-const description = "Software Engineer, GPU Programmer, FullStack developer, and YouTuber based in Toronto.";
+const description = "Software Engineer, GPU Programmer, Full-Stack Developer, and YouTuber based in Toronto.";
 const title = "Nabil Mansour's Portfolio";
 const author = "Nabil Mansour";
 const MAIN_URL = "https://www.nabilmansour.com/";
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${MAIN_URL}`
   },
-  keywords: "Nabil Mansour, Software Developer, FullStack Developer, Portfolio, Toronto, GPU Programmer, Shaderman",
+  keywords: "Nabil Mansour, Software Developer, Full-Stack Developer, Portfolio, Toronto, GPU Programmer, Shaderman",
   openGraph: {
     title: title,
     description: description,

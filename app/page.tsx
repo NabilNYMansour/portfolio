@@ -36,8 +36,8 @@ export default function Page() {
             </p>
             <p>
               I like to work with anything related to computers, but have mostly
-              focused on <b>web echnologies</b> and <b>graphics</b>. Recently,
-              I&apos;ve been getting into <b>deep Learning</b>.
+              focused on <b>web technologies</b> and <b>graphics</b>. Recently,
+              I&apos;ve been getting into <b>deep learning</b>.
             </p>
             <p>You can contact me and find more about me on the links below:</p>
             <div className="flex flex-col gap-1 text-sm sm:text-base">
@@ -211,7 +211,7 @@ const PROJECTS = [
   {
     title: "FiberToy",
     description:
-      "A React three fiber coding platform where users can create and share 3D scenes. Inspired by ShaderToy",
+      "A React Three Fiber coding platform where users can create and share 3D scenes. Inspired by ShaderToy",
     link: "https://fibertoy.dev/",
   },
   {
