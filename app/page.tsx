@@ -60,7 +60,7 @@ export default function Page() {
                 </a>
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
+            <div className="flex flex-wrap gap-2 justify-start">
               {CONTACTS.map((contact) => (
                 <Tooltip key={contact.title}>
                   <TooltipTrigger>
