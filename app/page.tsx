@@ -209,6 +209,11 @@ const CONTACTS = [
 
 const PROJECTS = [
   {
+    title: "Neuro Gambit 2",
+    description: "A chessbot trained on Lichess data using a custom recurrent transformer model.",
+    link: "https://github.com/NabilNYMansour/neuro-gambit-2",
+  },
+  {
     title: "FiberToy",
     description:
       "A React Three Fiber coding platform where users can create and share 3D scenes. Inspired by ShaderToy",
