@@ -222,7 +222,7 @@ const PROJECTS = [
   {
     title: "Phibelle Engine",
     description: "A web game engine",
-    link: "https://phibelle.studio/",
+    link: "https://phibelle.nabilmansour.com/",
   },
   {
     title: "QRCodeer",
